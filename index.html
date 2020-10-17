@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"> 
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"> 
+        
+         <title>Weather Dashboard</title>
+    </head>
+    
+    <body>
+        <header class="container-fluid text-center text-white bg-dark p-2">
+          <h1> Weather Dashboard</h1>
+          <p>Search for a city to see its current weather & a five-day forecast!
+          </p>
+        </header>
+    
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-3 bg-light">
+                        <h5 class="mt-0">Search by City:</h5>
+                        <div class="form-inline form-group">
+                            <input class="form-control"  type="text" id="cityname" />
+                            <button class="btn btn-light" id="search-button"> <i class="fa fa-search"></i></button>
+                    </div>
+                    
+                <ul class="list-group history"></ul>          
+            </div>
+    
+            <div class="col-lg-9">
+                <div id="today" class="mt-3"></div>
+                <div id="forecast" class="row mt-3"></div>
+            </div>
+            </div>
+            </div>
+
+        <!--canvas element for where the chart will be rendered-->
+            <div class="chart" style="position: relative; height:80vh; width:100vw">
+                <canvas id="myChart"></canvas>
+              </div>
+        <!--end of canvas element for chart-->
+
+    
+        <script src="script.js"></script>
+    </body>
+    </html>
