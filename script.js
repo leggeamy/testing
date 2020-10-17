@@ -2,7 +2,7 @@
 
 function getCityName() {
     var cityName = document.querySelector("#cityname").value;
-    getWeatherData(cityName);
+    getForecast(cityName);
     makeRow(cityName);
 }
 
@@ -13,10 +13,10 @@ function makeRow(cityName) {
     liEl.textContent = text;
     var historyEl = document.querySelector('.history');
     console.log(event.target)
-    historyEl.onclick = function(){
+    historyEl.onclick = function(event){
         console.log(event.target.tagName)
-        if (event.target.tagName === "li"){
-            getWeatherData(event.target.textContent)
+        if (event.target.tagName === "LI"){
+            getForecast(event.target.textContent)
         }
     }
     historyEl.appendChild(liEl);
